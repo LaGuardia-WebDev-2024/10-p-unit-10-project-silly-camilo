@@ -1,9 +1,12 @@
 var bakeryLabels = ["Crossiants","Baguettes"];
+var xPositions = 32;
+var yPositions = ["50, 100, 150, 200, 250"];
+var colors = [color(255, 105, 140), color(250, 196, 102), color(255, 244, 179), color(169, 232, 205), color(67, 165, 250)]
 
 setup = function() {
 
   size(400, 400); 
-  background(0,0,0,0);
+  background(255);
 
   var crossiantX = 60;
   textSize(30);
@@ -13,13 +16,27 @@ setup = function() {
     crossiantX += 40;
   }
 
-  textSize(15);
   text(bakeryLabels[0], 70, 105);
   text(bakeryLabels[1], 70, 185);
+
+  noStroke();
+  fill(255, 217, 227);
+  rect(0, 0, 75, 400);
+
 }
 
 draw = function(){   
 
+  if(mousePressed){
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
+  }
+
+}
+
+drawing = function(){
+  fill(colors)
+  ellipse(xPositions, yPositions, 50, 50);
 }
 
 
