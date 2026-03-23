@@ -23,6 +23,11 @@ setup = function() {
   fill(255, 217, 227);
   rect(0, 0, 75, 400);
 
+  for(var i = 50; i < colors.length; i += 60){
+    fill(colors[i]);
+    ellipse(37, i, 30, 30);
+  }
+
 }
 
 draw = function(){   
@@ -41,5 +46,7 @@ drawing = function(){
 
 
 mouseClicked = function(){
+
+
 
 }
