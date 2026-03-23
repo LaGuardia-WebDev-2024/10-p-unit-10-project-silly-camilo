@@ -1,7 +1,7 @@
 var bakeryLabels = ["Crossiants","Baguettes"];
 var xPositions = 32;
 var yPositions = ["50, 100, 150, 200, 250"];
-var colors = [(255, 105, 140), (250, 196, 102), (255, 244, 179), (169, 232, 205), (67, 165, 250)]
+var colors = ["rgb(255, 105, 140)", "rgb(250, 196, 102)", "rgb(255, 244, 179)", "rgb(169, 232, 205)", "rgb(67, 165, 250)"]
 
 setup = function() {
 
@@ -39,15 +39,6 @@ draw = function(){
   }
 }
 
-mouseClicked = function(){
-  if(mouseX < 75){
-    let d = dist(mouseX, mouseY, 37, i){
-      if(d<40){
-        fill(colors[i]);
-      }
-    }
-  }
-}
 
 drawing = function(){
   ellipse(xPositions, yPositions, 50, 50);
