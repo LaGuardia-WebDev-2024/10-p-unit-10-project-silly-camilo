@@ -8,8 +8,14 @@ setup = function() {
   size(400, 400); 
   background(255);
 
-  var crossiantX = 60;
-  textSize(30);
+
+  var y = 40;
+  strokeWeight(5)
+  
+  while (y < 400) {
+    line(0, y, 400, y);
+    y+=40;
+  }
 
   while(crossiantX < 300){
     text("🥐", crossiantX, 85);
@@ -19,7 +25,7 @@ setup = function() {
   text(bakeryLabels[0], 70, 105);
   text(bakeryLabels[1], 70, 185);
 
-  noStroke();
+  noStroke(); //color palette
   fill(255, 217, 227);
   rect(0, 0, 75, 400);
 
