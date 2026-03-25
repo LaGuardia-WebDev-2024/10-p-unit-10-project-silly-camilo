@@ -9,7 +9,9 @@ setup = function() {
   stroke(0, 0, 230);
   strokeWeight(1);
   
-  while (y < 400) {
+
+  //WHILE LOOP
+  while (y < 400) { 
     line(0, y, 400, y);
     y+=40;
   }
@@ -18,6 +20,7 @@ setup = function() {
   fill(255, 217, 227);
   rect(0, 0, 75, 400);
 
+  //FOR LOOP
   var index = 0;
   for(var i = 50; i < 400; i += 60){
     fill(colors[index]);
@@ -31,7 +34,7 @@ draw = function(){
 
   if(mousePressed){
     if(mouseX > 75){
-      drawing();
+      ellipse(mouseX, mouseY, 15, 15);
     }
   }
 
@@ -61,12 +64,18 @@ draw = function(){
       if (d5 < 40){
         fill(colors[4]);
       }
+
+      let d6 = dist(mouseX, mouseY, 37, 340);
+      if (d6 < 40){
+        fill(colors[5]);
+
+
+        //i could probably figure out how to use a loop instead but
+        //i dontfeel like it rn :broken_heart:
+        //ily ms hall if u r reading this have an amazingful day !!!!!!!!!!!
+      }
+
     }
   }
 
-}
-
-
-drawing = function(){
-  ellipse(mouseX, mouseY, 15, 15);
 }

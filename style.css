@@ -6,7 +6,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  font-family: Georgia, serif;
+  color: rgb(82, 82, 207);
+  font-family: 'Sour Gummy';
 }
 
 html{
@@ -15,15 +16,9 @@ html{
 }
 
 #myCanvas1 {
-  border: 1px solid black;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  border: 1px solid rgb(96, 104, 255);
+  border-radius: 20%;
 }
 
-#myCanvas2 {
-  border: 1px solid black;
-  border-radius: 30px;
-}
 
 
