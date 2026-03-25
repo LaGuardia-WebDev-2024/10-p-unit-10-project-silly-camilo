@@ -1,4 +1,4 @@
-var colors = [color(255, 105, 140), color(250, 196, 102), color(255, 244, 179), color(169, 232, 205), color(67, 165, 250)]
+var colors = [color(255, 105, 140), color(250, 196, 102), color(255, 244, 179), color(169, 232, 205), color(67, 165, 250), color(255)]
 
 setup = function() {
 
@@ -25,37 +25,48 @@ setup = function() {
     ellipse(37, i, 30, 30);
   }
 
-  let c = get(mouseX, mouseY);
-
-  for(var i = 0; i < colors.length; i++){
-    if(arrayEquals(c, colors[i])){
-      console.log(colors[i]);
-    }
-  }
-
 }
 
-draw = function(){   
+draw = function(){
+
   if(mousePressed){
     if(mouseX > 75){
-      xPositions.push(mouseX);
-      yPositions.push(mouseY);
-    }
-
-    if(mouseX < 75){
-
+      drawing();
     }
   }
+
+  mouseClicked = function(){
+    if(mouseX < 75){
+      let d1 = dist(mouseX, mouseY, 37, 50);
+      if (d1 < 40){
+        fill(colors[0]);
+      }
+
+      let d2 = dist(mouseX, mouseY, 37, 110);
+      if (d2 < 40){
+        fill(colors[1]);
+      }
+
+      let d3 = dist(mouseX, mouseY, 37, 170);
+      if (d3 < 40){
+        fill(colors[2]);
+      }
+
+      let d4 = dist(mouseX, mouseY, 37, 220);
+      if (d4 < 40){
+        fill(colors[3]);
+      }
+
+      let d5 = dist(mouseX, mouseY, 37, 280);
+      if (d5 < 40){
+        fill(colors[4]);
+      }
+    }
+  }
+
 }
 
-function arrayEquals(a, b){
-  return Array.isArray(a)&&
-  Array.isArray(b)&&
-  a.length == b.length &&
-
-  a.every((val.index) => val === b[index]);
-} 
 
 drawing = function(){
-  ellipse(xPositions, yPositions, 50, 50);
+  ellipse(mouseX, mouseY, 15, 15);
 }
